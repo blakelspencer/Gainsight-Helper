@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Blake's Gainsight Helper",
+  "version": "0.1",
+  "description": "Extends Admin Functionality in Gainsight",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "assets/painsightHide.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["https://*.gainsightcloud.com/*"],
+    "js": ["content.js"]
+  }],
+  "permissions": ["storage", "activeTab", "tabs", "cookies"]
+}
